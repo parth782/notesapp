@@ -102,3 +102,13 @@ searchtxt.addEventListener("input",function(){
 
        
 })
+function clocktime(){
+    let time=document.getElementById("time");
+    let d=new Date();
+    time.innerHTML="TIME: "+  d.toLocaleString('en-US', { hour: 'numeric',minute:'numeric',second:'numeric', hour12: true });
+}
+
+
+setInterval(()=>{
+    clocktime();
+},1000)
